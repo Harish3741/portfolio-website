@@ -388,20 +388,37 @@ export const WINGS = [
           {
             name: 'Hack for Humanity',
             date: '5-6 September 2026',
-            status: 'Event in progress',
             description: [
-              'Non-profits have real software problems and no budget to solve '
-              + 'them. Students have the time and, now, the tools. Hack for '
-              + 'Humanity puts the two together for a weekend.',
-              'Cross-university teams pick one of three non-profit partners, '
-              + 'work from a brief that organisation wrote themselves, and '
-              + 'build a working MVP on Base44 across two days.',
+              'Most hackathon projects die. The weekend ends, the build goes '
+              + 'quiet and the organisation that inspired it never sees it '
+              + 'again. Not at Hack for Humanity. Teams worked directly with '
+              + 'the non-profits whose real problems they were solving and '
+              + 'the winners get to keep developing their product with them.',
+              'Over two days at UTS Central, students picked a track by '
+              + 'walking into a room to hear the brief from Bipolar Australia, '
+              + 'Lou\'s Place or Save the Children Action Group UNSW, then '
+              + 'built prototypes on Base44 without writing any code.',
             ],
             highlights: [
-              'judged by Omer Shai, CMO at Wix',
-              'supporting winning teams to keep building with non-profits',
-              'coordinating with Base44, Enactus UNSW, AISOC MQ and UTS TechSoc',
+              '6 societies across 4 universities',
+              '250 student registrations, sold out',
+              '3 workshops and 5 roaming industry mentors',
+              'sponsored by Base44, partnered with Crucible Ventures',
+              'finals judged by Omer Shai, CMO at Wix, with Jerry Stesel and '
+              + 'Nandit Shah',
+              'winners can earn Base44 credits, Crucible Ventures support and '
+              + 'mentorship from Omer Shai by building with their non-profit',
             ],
+            images: [
+              { src: 'img/personal/hack-for-humanity-1.jpg',
+                alt: 'The main floor on day two, teams deep in their builds' },
+              { src: 'img/personal/hack-for-humanity-2.jpg',
+                alt: 'The whole room in for the pitching workshop' },
+              { src: 'img/personal/hack-for-humanity-3.jpg',
+                alt: 'Teams and mentors working side by side' },
+            ],
+            links: [{ label: 'Read the post',
+              url: 'https://www.linkedin.com/posts/harish-prabhu-9a93b0284_most-hackathon-projects-die-we-just-fixed-ugcPost-7503983088838795265-y3J7/' }],
           },
         ],
         tagline: 'Co-founded a tech society for building apps and automations '
