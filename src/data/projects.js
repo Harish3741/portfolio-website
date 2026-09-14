@@ -411,9 +411,9 @@ export const WINGS = [
             ],
             images: [
               { src: 'img/personal/hack-for-humanity-1.jpg',
-                alt: 'The main floor on day two, teams deep in their builds' },
+                alt: 'Welcoming the whole room' },
               { src: 'img/personal/hack-for-humanity-2.jpg',
-                alt: 'The whole room in for the pitching workshop' },
+                alt: 'The main floor on day two, teams deep in their builds' },
               { src: 'img/personal/hack-for-humanity-3.jpg',
                 alt: 'Teams and mentors working side by side' },
             ],
