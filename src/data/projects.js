@@ -420,6 +420,28 @@ export const WINGS = [
             links: [{ label: 'Read the post',
               url: 'https://www.linkedin.com/posts/harish-prabhu-9a93b0284_most-hackathon-projects-die-we-just-fixed-ugcPost-7503983088838795265-y3J7/' }],
           },
+          {
+            name: 'Build Your Life',
+            date: '6 October 2026',
+            description: [
+              'Every productivity app is built for everyone, so it fits '
+              + 'nobody quite right. We wanted students to leave with a tool '
+              + 'built around their own life instead.',
+              'A three-hour evening workshop at UNSW, run with UNSW Founders '
+              + 'and Enactus UNSW. Everyone built their own dashboard on Base44 '
+              + 'and an AI superagent hooked up to their email, calendar and '
+              + 'Google Drive. I demoed a copy of my own habit tracker rebuilt '
+              + 'on Base44 to show what one looks like when you actually use it '
+              + 'every day.',
+            ],
+            highlights: [
+              'everyone built a personal dashboard to take home',
+              'an AI superagent connected to email, calendar and Google Drive',
+              'run with UNSW Founders and Enactus UNSW',
+              'no coding experience needed',
+            ],
+            links: [{ label: 'Event page', url: 'https://luma.com/8aioctf3' }],
+          },
         ],
         tagline: 'Co-founded a tech society for building apps and automations '
           + 'without code',
@@ -550,7 +572,7 @@ export const WINGS = [
         ],
         tagline: 'Subscription practice platform for the NSW Selective High '
           + 'School Placement Test.',
-        description:
+        description: [
           'Year 5 and 6 students preparing for the NSW Selective test needed '
           + 'practice that matched the real paper. So I started building a '
           + 'subscription platform in December 2025 that mirrors the exam '
@@ -559,19 +581,27 @@ export const WINGS = [
           + 'Mathematical Reasoning, Thinking Skills and Writing. It has been '
           + 'live and taking paying subscribers since February 2026, acquired '
           + 'through Google and Meta ads I ran myself.',
+          'In October 2026 I moved the whole platform off Lovable and onto '
+          + 'Base44. Every question and mock paper came across exactly, so did '
+          + 'my subscribers\u2019 history, the AI writing marking moved out of '
+          + 'n8n into Base44\u2019s own workflows and students can now sign in '
+          + 'with Google.',
+        ],
         // Trimmed to the ones that say something about the build. Dropped the
         // build tool, the component library, the router, the hosting, the mail
         // service and the model gateway — all real, none of them a decision
         // anyone would ask about.
         tech: [
           'React 18', 'TypeScript', 'Tailwind CSS', 'TanStack Query',
-          'Supabase', 'Stripe', 'n8n',
+          'Base44', 'Stripe',
         ],
         highlights: [
           '1,392 visitors and 5,167 pageviews since launch',
           '3 figure revenue within first month',
           '4.2% click through rate and 11% conversion rate from ad click to '
           + 'paid subscription',
+          'Migrated the full question bank to Base44 with zero differences '
+          + 'from the original',
         ],
         links: [{ label: 'Visit site', url: 'https://scorify100.com/' }],
       },
@@ -683,13 +713,26 @@ export const WINGS = [
           'a habit monitor that automatically checks if I\u2019ve completed my '
           + 'set goals for the day.',
           'a streak board to see how many weeks I\u2019ve been consistent.',
-          'a module that reads all my messages using beeper MCP, pulls out what '
-          + 'I\u2019ve agreed to (plans or tasks) and automatically inputs it.',
+          'a module that reads all my messages using beeper MCP and my emails, '
+          + 'pulls out what I\u2019ve agreed to (plans or tasks) and '
+          + 'automatically inputs it.',
           'a \u2018From Message\u2019 section manually allows me to decline and '
           + 'approve it',
           'exporting my step count to track 10k steps (was so painful cause of '
           + 'apple data privacy)',
+          'a dashboard for my goals, meetings and contacts that replaced '
+          + 'Notion. Anything I\u2019m on the hook for in a meeting lands in my '
+          + 'goals as a tick box.',
+          'a finance section that reads my Amex alerts from Gmail, sorts each '
+          + 'purchase into a category with Claude and pings me when I go over '
+          + 'budget.',
+          'in testing: a meeting notetaker that records my calls on the Mac, '
+          + 'transcribes them locally and writes up the notes (my own Granola).',
+          'in testing: a phone app that syncs with the Mac through Supabase so '
+          + 'I can use it on the go.',
         ],
+        tech: ['Next.js', 'TypeScript', 'SQLite', 'Claude', 'Supabase',
+          'Swift', 'Whisper'],
       },
 
       {
@@ -730,6 +773,32 @@ export const WINGS = [
           + 'with a nag on both screens',
           'Content I\u2019m consuming on my laptop - just sitting in '
           + 'front of a screen doesn\u2019t count as work',
+        ],
+      },
+
+      {
+        title: 'Sleep Guard',
+        launch: 'Sep 2026',
+        tagline: 'Keeps my MacBook awake with the lid shut while an AI agent is '
+          + 'still working.',
+        description: [
+          'I hand long jobs to Claude Code and ChatGPT\u2019s Codex and then '
+          + 'close the lid and walk away. The Mac went to sleep the second the '
+          + 'lid shut and the job died halfway through. Turning sleep off for '
+          + 'good wasn\u2019t the answer either, as a shut laptop that never '
+          + 'sleeps just runs hot in a bag.',
+          'So I built a guard that hooks into both agents. When I give one a '
+          + 'task it keeps the Mac awake, lid shut or not. When the task '
+          + 'finishes it lets go, and once nothing is left running the Mac goes '
+          + 'to sleep about a minute and a half later.',
+        ],
+        tech: ['Bash', 'launchd', 'pmset', 'Claude Code hooks', 'Codex hooks'],
+        highlights: [
+          'Works with both Claude Code and ChatGPT\u2019s Codex',
+          'Lets go on its own if a task goes quiet for 30 minutes, runs past '
+          + 'four hours or the battery drops below 40%',
+          'Covered by 79 tests that run against a fake power manager, so '
+          + 'testing never touches the real Mac',
         ],
       },
 
