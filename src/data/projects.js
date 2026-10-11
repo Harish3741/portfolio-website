@@ -777,6 +777,11 @@ export const WINGS = [
       {
         title: 'Meeting Notes',
         launch: 'Oct 2026',
+        images: [
+          { src: 'img/client/meeting-notes-icon.png',
+            alt: 'The Meeting Notes app icon: a white speech bubble with two '
+              + 'lines of notes and a coral recording dot' },
+        ],
         tagline: 'My own Granola. It records my meetings on my Mac and writes '
           + 'the notes for me.',
         description: [
@@ -802,7 +807,14 @@ export const WINGS = [
           + 'what\u2019s still open, and my jobs land in my goals as tick boxes',
           'I can jot rough notes during the meeting for the AI to expand, or '
           + 'ask the meeting a question afterwards',
-          'Its first real run was a 68-minute society AGM',
+          'Knows my voice. It learns it from my calls, so in a room it can '
+          + 'tell which lines are mine',
+          'Keeps the people in the room apart from the people on the call '
+          + 'when a meeting is both',
+          'Its first real run was a 68-minute society AGM. It took over two '
+          + 'hours to write up because the Mac fell asleep with the lid shut, '
+          + 'so now it keeps the Mac awake until the notes are done and the '
+          + 'same meeting takes 8 minutes',
         ],
       },
 
