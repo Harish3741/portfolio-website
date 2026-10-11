@@ -726,8 +726,6 @@ export const WINGS = [
           'a finance section that reads my Amex alerts from Gmail, sorts each '
           + 'purchase into a category with Claude and pings me when I go over '
           + 'budget.',
-          'in testing: a meeting notetaker that records my calls on the Mac, '
-          + 'transcribes them locally and writes up the notes (my own Granola).',
           'in testing: a phone app that syncs with the Mac through Supabase so '
           + 'I can use it on the go.',
         ],
@@ -773,6 +771,38 @@ export const WINGS = [
           + 'with a nag on both screens',
           'Content I\u2019m consuming on my laptop - just sitting in '
           + 'front of a screen doesn\u2019t count as work',
+        ],
+      },
+
+      {
+        title: 'Meeting Notes',
+        launch: 'Oct 2026',
+        tagline: 'My own Granola. It records my meetings on my Mac and writes '
+          + 'the notes for me.',
+        description: [
+          'Between societies and events I\u2019m in a lot of meetings, and I '
+          + 'was either taking notes instead of listening or listening and '
+          + 'forgetting half of what I said I\u2019d do. Notetaker bots fix '
+          + 'that, but nobody likes a bot joining their call.',
+          'So I built one that runs on my Mac instead. When a Zoom, Teams or '
+          + 'Meet call starts using my mic it starts recording by itself, and '
+          + 'a banner tells me with a button to stop it. For meetings in '
+          + 'person I start it from the menu bar. Once the meeting ends it '
+          + 'transcribes everything on the Mac, works out who said what, and '
+          + 'Claude writes the notes straight into my habit tracker.',
+        ],
+        tech: ['Swift', 'WhisperKit', 'Core Audio', 'Claude', 'Next.js',
+          'TypeScript'],
+        highlights: [
+          'No bot joins the call. It records my mic and the call audio '
+          + 'straight off the Mac',
+          'Transcribes on the Mac with Whisper, so the audio never leaves my '
+          + 'laptop',
+          'Notes come out as a summary, what each person has to do and '
+          + 'what\u2019s still open, and my jobs land in my goals as tick boxes',
+          'I can jot rough notes during the meeting for the AI to expand, or '
+          + 'ask the meeting a question afterwards',
+          'Its first real run was a 68-minute society AGM',
         ],
       },
 
