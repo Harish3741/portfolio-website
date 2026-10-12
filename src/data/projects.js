@@ -823,24 +823,17 @@ export const WINGS = [
         launch: 'Sep 2026',
         tagline: 'Keeps my MacBook awake with the lid shut while an AI agent is '
           + 'still working.',
-        description: [
-          'I hand long jobs to Claude Code and ChatGPT\u2019s Codex and then '
-          + 'close the lid and walk away. The Mac went to sleep the second the '
-          + 'lid shut and the job died halfway through. Turning sleep off for '
-          + 'good wasn\u2019t the answer either, as a shut laptop that never '
-          + 'sleeps just runs hot in a bag.',
-          'So I built a guard that hooks into both agents. When I give one a '
-          + 'task it keeps the Mac awake, lid shut or not. When the task '
-          + 'finishes it lets go, and once nothing is left running the Mac goes '
-          + 'to sleep about a minute and a half later.',
-        ],
+        description:
+          'I got tired of walking around with my laptop open while my Claude '
+          + 'or Codex agent was working. So I built a guard that hooks into '
+          + 'both agents. When I give one a task it keeps the Mac awake, lid '
+          + 'shut or not. When the task finishes it lets go and once nothing '
+          + 'is left running the Mac goes to sleep about a minute and a half '
+          + 'later.',
         tech: ['Bash', 'launchd', 'pmset', 'Claude Code hooks', 'Codex hooks'],
         highlights: [
           'Works with both Claude Code and ChatGPT\u2019s Codex',
-          'Lets go on its own if a task goes quiet for 30 minutes, runs past '
-          + 'four hours or the battery drops below 40%',
-          'Covered by 79 tests that run against a fake power manager, so '
-          + 'testing never touches the real Mac',
+          'Restored my public reputation',
         ],
       },
 
