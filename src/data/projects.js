@@ -693,9 +693,27 @@ export const WINGS = [
         // The dashboard's own shape, and resized to 1600 wide the way
         // img/README.md asks: the panel never shows it wider than 780.
         ratio: '1600 / 1002',
-        images: [{ src: 'img/client/habit-tracker.png',
-          alt: 'The habit tracker dashboard: the day rebuilt from my calendar, '
-            + 'with habits and streaks alongside' }],
+        // The first is the real board. The rest were shot on a copy of the
+        // tracker filled with made-up data, so no real finances, contacts or
+        // meetings go on a public page.
+        images: [
+          { src: 'img/client/habit-tracker.png',
+            alt: 'The habit tracker dashboard: the day rebuilt from my calendar, '
+              + 'with habits and streaks alongside' },
+          { src: 'img/client/habit-tracker-calendar.jpg',
+            alt: 'The calendar, with habit events ticked off as they happen' },
+          { src: 'img/client/habit-tracker-streaks.jpg',
+            alt: 'Streaks: every habit week by week, focus time from Focus '
+              + 'Monitor and the month\u2019s spending against budget' },
+          { src: 'img/client/habit-tracker-goals.jpg',
+            alt: 'Goals, one column per part of my life' },
+          { src: 'img/client/habit-tracker-meetings.jpg',
+            alt: 'A meeting written up: summary, who is doing what, and what '
+              + 'is still open' },
+          { src: 'img/client/habit-tracker-contacts.jpg',
+            alt: 'Contacts, with the event and part of my life each person '
+              + 'belongs to' },
+        ],
         tagline: 'A glorified to-do list that automatically manages my life.',
         description: [
           'I got tired of having to check my calendar everyday to update my to '
@@ -716,16 +734,10 @@ export const WINGS = [
           'a module that reads all my messages using beeper MCP and my emails, '
           + 'pulls out what I\u2019ve agreed to (plans or tasks) and '
           + 'automatically inputs it.',
-          'a \u2018From Message\u2019 section manually allows me to decline and '
-          + 'approve it',
           'exporting my step count to track 10k steps (was so painful cause of '
           + 'apple data privacy)',
-          'a dashboard for my goals, meetings and contacts that replaced '
-          + 'Notion. Anything I\u2019m on the hook for in a meeting lands in my '
-          + 'goals as a tick box.',
-          'a finance section that reads my Amex alerts from Gmail, sorts each '
-          + 'purchase into a category with Claude and pings me when I go over '
-          + 'budget.',
+          'finance section that sorts each purchase into a category and sends '
+          + 'alerts',
           'in testing: a phone app that syncs with the Mac through Supabase so '
           + 'I can use it on the go.',
         ],
@@ -753,11 +765,7 @@ export const WINGS = [
           + 'productive.',
           'So I built a menu bar app that times it properly. I start a focus '
           + 'session by hand and the clock ticks in the menu bar. The first '
-          + 'distraction stops it and logs the record onto my habits app. The '
-          + 'point isn\u2019t to catch one kind of distraction. It\u2019s to '
-          + 'catch all the ways I actually lose a morning; walking off, '
-          + 'reaching for my phone or sitting perfectly still at my laptop '
-          + 'watching YouTube.',
+          + 'distraction stops it and logs the record onto my habits app.',
         ],
         tech: ['Python', 'rumps', 'YOLOv8', 'AVFoundation', 'SQLite',
           'iOS Shortcuts', 'Swift'],
@@ -777,24 +785,31 @@ export const WINGS = [
       {
         title: 'Meeting Notes',
         launch: 'Oct 2026',
+        // Both 1600x1000. The first is a recreation of the menu and banner
+        // using the app's own icon and wording (this machine could not
+        // screenshot the real ones); the second is the tracker copy with a
+        // made-up meeting in it.
+        ratio: '8 / 5',
         images: [
-          { src: 'img/client/meeting-notes-icon.png',
-            alt: 'The Meeting Notes app icon: a white speech bubble with two '
-              + 'lines of notes and a coral recording dot' },
+          { src: 'img/client/meeting-notes-app.jpg',
+            alt: 'The menu bar menu with Start notes, and the Taking notes '
+              + 'banner with its Don\u2019t record button' },
+          { src: 'img/client/habit-tracker-meetings.jpg',
+            alt: 'The notes it writes: a summary, who is doing what, and what '
+              + 'is still open' },
         ],
         tagline: 'My own Granola. It records my meetings on my Mac and writes '
           + 'the notes for me.',
         description: [
-          'Between societies and events I\u2019m in a lot of meetings, and I '
-          + 'was either taking notes instead of listening or listening and '
-          + 'forgetting half of what I said I\u2019d do. Notetaker bots fix '
-          + 'that, but nobody likes a bot joining their call.',
+          'Between University, work and hosting crazy events; I\u2019m in a lot '
+          + 'of meetings. I was either taking notes instead of listening or '
+          + 'listening and forgetting half of what I said I\u2019d do. Notetaker '
+          + 'bots fix that but nobody likes a bot joining their call.',
           'So I built one that runs on my Mac instead. When a Zoom, Teams or '
-          + 'Meet call starts using my mic it starts recording by itself, and '
-          + 'a banner tells me with a button to stop it. For meetings in '
-          + 'person I start it from the menu bar. Once the meeting ends it '
-          + 'transcribes everything on the Mac, works out who said what, and '
-          + 'Claude writes the notes straight into my habit tracker.',
+          + 'Meet call starts it uses my mic to start recording by itself. Once '
+          + 'the meeting ends it transcribes everything on the Mac, works out '
+          + 'who said what and Claude writes the notes straight into my habit '
+          + 'tracker.',
         ],
         tech: ['Swift', 'WhisperKit', 'Core Audio', 'Claude', 'Next.js',
           'TypeScript'],
@@ -803,18 +818,8 @@ export const WINGS = [
           + 'straight off the Mac',
           'Transcribes on the Mac with Whisper, so the audio never leaves my '
           + 'laptop',
-          'Notes come out as a summary, what each person has to do and '
-          + 'what\u2019s still open, and my jobs land in my goals as tick boxes',
-          'I can jot rough notes during the meeting for the AI to expand, or '
-          + 'ask the meeting a question afterwards',
-          'Knows my voice. It learns it from my calls, so in a room it can '
-          + 'tell which lines are mine',
-          'Keeps the people in the room apart from the people on the call '
-          + 'when a meeting is both',
-          'Its first real run was a 68-minute society AGM. It took over two '
-          + 'hours to write up because the Mac fell asleep with the lid shut, '
-          + 'so now it keeps the Mac awake until the notes are done and the '
-          + 'same meeting takes 8 minutes',
+          'Actionables directly sent to my personal dashboard',
+          'Integrated AI for quick questions',
         ],
       },
 
